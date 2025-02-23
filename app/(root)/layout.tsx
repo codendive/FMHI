@@ -1,3 +1,6 @@
+import Header from '@/components/shared/header'
+import Footer from '@/components/footer'
+
 const RootLayout = ({
   children
 }: Readonly<{
@@ -5,7 +8,9 @@ const RootLayout = ({
 }>) => {
   return (
     <div className='flex h-screen flex-col'>
-      <div className='main flex-1'>{children}</div>
+      <Header />
+      <main className='main flex-1'>{children}</main>
+      <Footer />
     </div>
   )
 }
